@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переклад слів</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<div class="box">
+    <div class="levels">
+        <label><input type="radio" name="level" value="easy" checked> Початковий</label>
+        <label><input type="radio" name="level" value="medium"> Середній</label>
+        <label><input type="radio" name="level" value="hard"> Високий</label>
+    </div>
+
+    <div class="stats">
+        <span id="step">Крок 1 / 10</span>
+        <span>Вірно: <b id="ok" class="green">0</b> | Невірно: <b id="bad" class="red">0</b></span>
+    </div>
+
+    <div class="card" id="card" title="Натисніть для перевірки">Word</div>
+
+    <input type="text" id="input" placeholder="Введіть переклад і натисніть на картку">
+    <div class="error" id="err">Введіть коректний переклад (тільки літери)!</div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <h3>Тест завершено!</h3>
+        <p>Рівень: <b id="resLevel">Початковий</b></p>
+        <p class="green">Вірно: <b id="resOk">0</b></p>
+        <p class="red">Невірно: <b id="resBad">0</b></p>
+        <button id="restart">Спочатку</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
